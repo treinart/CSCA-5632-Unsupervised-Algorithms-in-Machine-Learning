@@ -56,7 +56,7 @@ This course provides a comprehensive exploration of machine learning algorithms 
             <td>HTML, PDF, and DOCX versions of the notebook.</td>
         </tr>
         <tr>
-            <td><code>│&nbsp;&nbsp;&nbsp;└── 📁 Movie Classification Project/</code></td>
+            <td><code>│&nbsp;&nbsp;&nbsp;└── 📁 Limitations of sklearn NMF/</code></td>
             <td><i>(placeholder for a future project)</i></td>
         </tr>
         <tr>
