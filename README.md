@@ -1,9 +1,8 @@
-# CSCA 5632 - Unsupervised Algorithms in Machine Learning
+# CSCA 5632: Unsupervised Algorithms in Machine Learning
 
-This repository contains all coursework and projects for the University of Colorado Boulder graduate course **CSCA 5632 – Unsupervised Algorithms in Machine Learning**.
+This repository contains my work for Weeks 4 and 5 (placeholder) of the ***University of Colorado Boulder*** graduate course **CSCA 5632: Unsupervised Algorithms in Machine Learning**.
 
-### Course Description
-This course provides a comprehensive exploration of machine learning algorithms that do not require labeled data. Key topics include dimensionality reduction (PCA, NMF), clustering (K-Means, DBSCAN), and anomaly detection. Projects focus on practical, hands-on implementation of these algorithms to solve real-world problems.
+The focus in these weeks was on hands-on projects using real datasets. Topics include text classification with traditional and deep learning methods, and evaluation of recommender system algorithms, including why certain standard approaches fail in sparse data settings.
 
 ## Repository Structure
 
@@ -25,7 +24,7 @@ This course provides a comprehensive exploration of machine learning algorithms 
         </tr>
         <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;└── 📁 Kaggle Mini-Project: BBC News Classification/</code></td>
-            <td><b>This project's main folder.</b></td>
+            <td><b>Week 4 Part 1</b> <b><i>Peer-graded Assignment</i></b>.</td>
         </tr>
         <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📁 datasets/</code></td>
@@ -53,11 +52,15 @@ This course provides a comprehensive exploration of machine learning algorithms 
         </tr>
          <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📄 (other exports)</code></td>
-            <td>HTML, PDF, and DOCX versions of the notebook.</td>
+            <td>HTML, PDF, and DOCX export script using nbconvert/pandoc.</td>
+        </tr>
+         <tr>
+            <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 🖼️ kaggle_submission_screenshot_combined.png</code></td>
+            <td>Screenshot of final NMF and BERT submission scores on Kaggle.</td>
         </tr>
         <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;└── 📁 Limitations of sklearn NMF/</code></td>
-            <td><i>(placeholder for a future project)</i></td>
+            <td><b>Week 4 Part 2</b> <b><i>Peer-graded Assignment</i></b>.</td>
         </tr>
         <tr>
             <td><code>├── 📁 Week5/</code></td>
@@ -73,10 +76,25 @@ This course provides a comprehensive exploration of machine learning algorithms 
 ## Week 4 - Kaggle Mini-Project: BBC News Classification
 
 ### Overview
-This project tackles the **BBC News Classification dataset** from Kaggle. The goal was to build and compare two distinct NLP pipelines for classifying articles into five categories (Business, Entertainment, Politics, Sport, and Tech). The analysis directly contrasts a traditional unsupervised approach (**TF-IDF + NMF**) with a modern, deep learning approach (**BERT embeddings + Logistic Regression**).
+This project tackles the **BBC News Classification dataset** from Kaggle. The goal was to build and compare two distinct NLP pipelines for classifying articles into five categories (Business, Entertainment, Politics, Sport, and Tech). The analysis directly contrasts a traditional unsupervised approach 
+- **TF-IDF + NMF**: A traditional unsupervised topic modeling approach.  
+- **BERT embeddings + Logistic Regression**: A modern method using contextual embeddings.  
 
 ### Key Finding
 The analysis concluded that the BERT-based pipeline was dramatically superior, achieving **100% training accuracy** due to the high-quality, separable feature space created by its contextual embeddings.
+
+---
+
+## Week 4 – Limitations of sklearn NMF
+
+### Overview  
+This project tested **Non-negative Matrix Factorization (NMF)** and **Truncated SVD** from ***scikit-learn*** on the MovieLens dataset and compared them to the best model from Week 3 collaborative filtering with Jaccard similarity. The goal was to see how these standard matrix factorization tools hold up in a sparse data setting.
+
+### Key Finding 
+The Jaccard similarity model from Week 3 achieved an RMSE of 0.9509. The best NMF run (k=30) and the best Truncated SVD run (k=20) came in at 1.018 and 1.017, roughly 0.07 higher. The main reason for the drop in accuracy is that scikit-learn’s NMF and SVD require a complete matrix. Since over 96% of the ratings were missing, they were filled with the global mean before training, which diluted the real patterns in the data.
+
+### ***Suggested Fix***  
+Use methods built for sparse recommendation data, like Alternating Least Squares (ALS) with bias terms, or other algorithms that can train only on the actual ratings without filling in the rest.
 
 ---
 <p align="center">
