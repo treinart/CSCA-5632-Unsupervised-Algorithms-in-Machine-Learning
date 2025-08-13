@@ -52,7 +52,7 @@ The focus in these weeks was on hands-on projects using real datasets. Topics in
         </tr>
          <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📄 (other exports)</code></td>
-            <td>HTML, PDF, and DOCX export script using nbconvert/pandoc.</td>
+            <td>HTML and PDF versions of the final notebook. </td>
         </tr>
          <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 🖼️ kaggle_submission_screenshot_combined.png</code></td>
@@ -61,6 +61,26 @@ The focus in these weeks was on hands-on projects using real datasets. Topics in
         <tr>
             <td><code>│&nbsp;&nbsp;&nbsp;└── 📁 Limitations of sklearn NMF/</code></td>
             <td><b>Week 4 Part 2</b> <b><i>Peer-graded Assignment</i></b>.</td>
+        </tr>
+        <tr>
+            <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📁 artifacts/</code></td>
+            <td>Saved model outputs (factors, predictions, metadata).</td>
+        </tr>
+        <tr>
+            <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📁 datasets/</code></td>
+            <td>The MovieLens datasets used for the project.</td>
+        </tr>
+        <tr>
+            <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📁 plots/</code></td>
+            <td>Saved images of key visualizations from the notebook.</td>
+        </tr>
+        <tr>
+            <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── 📄 Week4_Limitations_of_sklearn_NMF.ipynb</code></td>
+            <td>The main Jupyter Notebook for the project.</td>
+        </tr>
+        <tr>
+            <td><code>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── 📄 (other exports)</code></td>
+            <td>HTML and PDF versions of the final notebook.</td>
         </tr>
         <tr>
             <td><code>├── 📁 Week5/</code></td>
