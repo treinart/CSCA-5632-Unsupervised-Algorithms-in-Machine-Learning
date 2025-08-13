@@ -1,0 +1,28 @@
+{
+  "timestamp": "20250812-220612",
+  "seed": 42,
+  "best_k": 20,
+  "final_rmse": 1.0172810805403691,
+  "runtime_seconds": 0.36,
+  "shapes": {
+    "W": [
+      6040,
+      20
+    ],
+    "components": [
+      20,
+      3664
+    ],
+    "R": [
+      6040,
+      3664
+    ]
+  },
+  "svd_explained_variance_ratio_sum": 0.13197142547584176,
+  "paths": {
+    "model_joblib": "artifacts_svd\\svd_model_k20_20250812-220612.joblib",
+    "W_csv": "artifacts_svd\\W_users_k20_20250812-220612.csv",
+    "components_csv": "artifacts_svd\\components_items_k20_20250812-220612.csv",
+    "test_predictions_csv": "artifacts_svd\\test_predictions_k20_20250812-220612.csv"
+  }
+}
