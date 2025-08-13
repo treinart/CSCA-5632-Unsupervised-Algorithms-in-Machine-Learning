@@ -1,0 +1,28 @@
+{
+  "timestamp": "20250812-220604",
+  "seed": 42,
+  "best_k": 30,
+  "max_iter": 500,
+  "final_rmse": 1.0181446999384647,
+  "runtime_seconds": 12.78,
+  "shapes": {
+    "W": [
+      6040,
+      30
+    ],
+    "H": [
+      30,
+      3664
+    ],
+    "R": [
+      6040,
+      3664
+    ]
+  },
+  "paths": {
+    "model_joblib": "artifacts_nmf\\nmf_model_k30_20250812-220604.joblib",
+    "W_csv": "artifacts_nmf\\W_users_k30_20250812-220604.csv",
+    "H_csv": "artifacts_nmf\\H_items_k30_20250812-220604.csv",
+    "test_predictions_csv": "artifacts_nmf\\test_predictions_k30_20250812-220604.csv"
+  }
+}
