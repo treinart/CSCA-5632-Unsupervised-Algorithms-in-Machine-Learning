@@ -142,7 +142,7 @@ The analysis concluded that the BERT-based pipeline was dramatically superior, a
 
 ---
 
-## **Week 4 – Limitations of sklearn NMF**
+## **Week 4 - Limitations of sklearn NMF**
 
 ### Overview 
 This project tested **Non-negative Matrix Factorization (NMF)** and **Truncated SVD** from ***scikit-learn*** on the MovieLens dataset and compared them to the best model from Week 3 collaborative filtering with Jaccard similarity. The goal was to see how these standard matrix factorization tools hold up in a sparse data setting.
@@ -150,7 +150,8 @@ This project tested **Non-negative Matrix Factorization (NMF)** and **Truncated 
 ### Key Finding 
 The Jaccard similarity model from Week 3 achieved an RMSE of 0.9509. The best NMF run (k=30) and the best Truncated SVD run (k=20) came in at 1.018 and 1.017, roughly 0.07 higher. The main reason for the drop in accuracy is that scikit-learn’s NMF and SVD require a complete matrix. Since over 96% of the ratings were missing, they were filled with the global mean before training, which diluted the real patterns in the data.
 
-### ***Suggested Fix*** Use methods built for sparse recommendation data, like Alternating Least Squares (ALS) with bias terms, or other algorithms that can train only on the actual ratings without filling in the rest.
+### ***Suggested Fix***  
+Use methods built for sparse recommendation data, like Alternating Least Squares (ALS) with bias terms, or other algorithms that can train only on the actual ratings without filling in the rest.
 
 ---
 <p align="center">
