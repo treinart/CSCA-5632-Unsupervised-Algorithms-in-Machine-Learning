@@ -1,0 +1,5 @@
+cluster_id_A,scenario_A,n_tracks,agreement_rate
+2,Low-Speed Maneuvering,503,0.0000
+3,Idling and Creeping,945,0.0179
+0,High-Speed Cruising,542,0.3942
+1,Stationary,1508,1.0000
